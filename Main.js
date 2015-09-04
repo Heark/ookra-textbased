@@ -18,8 +18,15 @@ $(document).ready(function() {
         $(this).css('border', '0px solid');
     });
 });
-
+function define(arg){
+    window[arg] = null
+}
+define("gameStarted");
 // End of Buttons
+var gameAdd = document.getElementById('#game');
+function gameMessage(arg){
+    gameAdd.innerHTML = gameAdd.innerHTML + "<br>" + arg;
+}
 function startGame(){
-    document.write("Test")
+    gameStarted = true;
 }
