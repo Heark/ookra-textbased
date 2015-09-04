@@ -1,8 +1,6 @@
 /*
-*/
-
+ */
 // Buttons below
-
 // Start Game Button
 $(document).ready(function() {
     $('.start-button').click(function() {
@@ -18,15 +16,30 @@ $(document).ready(function() {
         $(this).css('border', '0px solid');
     });
 });
-function define(arg){
-    window[arg] = null
+
+function define(arg) {
+    window[arg] = null;
 }
 define("gameStarted");
 // End of Buttons
-var gameAdd = document.getElementById('#game');
-function gameMessage(arg){
-    gameAdd.innerHTML = gameAdd.innerHTML + "<br>" + arg;
+var gameAdd = document.getElementById('game');
+var game = {
+    addMessage: function(arg) {
+        gameAdd.innerHTML = gameAdd.innerHTML + "<center><br>" + arg + "</center>";
+
+    },
+
+    addEmphMessage: function(arg) {
+        gameAdd.innerHTML = gameAdd.innerHTML + "<div class=Emph>" + arg + "</div>";
+    }
+
 }
-function startGame(){
-    gameStarted = true;
+
+function startGame() {
+    if (gameStarted == true) {
+
+    } else {
+        gameStarted = true;
+        game.addEmphMessage("hi");
+    }
 }
