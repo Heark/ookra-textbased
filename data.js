@@ -60,3 +60,4 @@ var Slime = new companion("Slime","Jiggles");
 var Dog = new companion("Dog","Doug"); // Doug LOL
 
 // end of data.js
+var monsters_tier_1 = [Slime]
