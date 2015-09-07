@@ -15,12 +15,20 @@ $(document).ready(function() {
         $(this).css('border-radius', '0px');
         $(this).css('border', '0px solid');
     });
+    if(gameList == true){
+        $("#gamelist").show()
+       $("#gamelist").accordion() 
+    } else {
+        $("#gamelist").hide()
+    }
+    if(inBattle == true){
+        $("battlelist").show()
+    } else {
+        $("battlelist").hide()
+    }
 });
 
-function define(arg) {
-    window[arg] = null;
-}
-define("gameStarted");
+var gameStarted;
 // End of Buttons
 var gameAdd = document.getElementById('game');
 var game = {
@@ -36,10 +44,9 @@ var game = {
 }
 
 function startGame() {
-    if (gameStarted == true) {
-
-    } else {
-        gameStarted = true;
-        game.addEmphMessage("hi");
+    if (gameStarted == true){
+        
+    } else { 
+        game.addEmphMessage("Welcome to the game!")
     }
 }
