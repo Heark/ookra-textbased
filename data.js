@@ -16,9 +16,10 @@ var OS = Session.ENV()
 //You alive there?
 var get_name = prompt("What is your name?");
 
-var Players = function(hp, name) {
+var Players = function(hp, name, level) {
     this.hp = hp;
     this.name = name;
+    this.level = level;
     // anything else you can think of
 };
 var Item = function(item, desc, effect){
@@ -37,7 +38,7 @@ var Slime = new Enemies("Slime", 20, drop_1)
 
 
 // Player
-var Player = new Players(100, get_name);
+var Player = new Players(100, get_name, 1);
 
 // Items
 var Potion = new Item("Potion", "Recovers hp by 20 pts", 20);
@@ -59,5 +60,6 @@ var Talking_Potato = new companion("Talking Potato", "Hotness");
 var Slime = new companion("Slime","Jiggles");
 var Dog = new companion("Dog","Doug"); // Doug LOL
 
-// end of data.js
+
 var monsters_tier_1 = [Slime]
+var selectedmonster;
