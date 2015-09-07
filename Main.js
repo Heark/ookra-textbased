@@ -26,6 +26,18 @@ $(document).ready(function() {
     } else {
         $("battlelist").hide()
     }
+    $("#walk").click(function(){
+        game.addMessage("You walk...");
+        if(Candy.rand(1, 20) >= 10){
+            if(Player.level  > 1 && Player.level < 5){
+            selectedmonster = Candy.shuffle(monsters_tier_1)
+            }
+            game.addEmphMessage("You ran into a battle with "+selectedmonster.name)
+            inBattle = true;
+        } else {
+            
+        }
+    })
 });
 
 var gameStarted;
