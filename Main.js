@@ -15,17 +15,6 @@ $(document).ready(function() {
         $(this).css('border-radius', '0px');
         $(this).css('border', '0px solid');
     });
-    if(gameList == true){
-        $("#gamelist").show()
-       $("#gamelist").accordion() 
-    } else {
-        $("#gamelist").hide()
-    }
-    if(inBattle == true){
-        $("battlelist").show()
-    } else {
-        $("battlelist").hide()
-    }
     $("#walk").click(function(){
         game.addMessage("You walk...");
         if(Candy.rand(1, 20) >= 10){
@@ -39,7 +28,17 @@ $(document).ready(function() {
         }
     })
 });
-
+    if(gameList == true){
+        $("#gamelist").show()
+       $("#gamelist").accordion() 
+    } else {
+        $("#gamelist").hide()
+    }
+    if(inBattle == true){
+        $("battlelist").show()
+    } else {
+        $("battlelist").hide()
+    }
 var gameStarted;
 // End of Buttons
 var gameAdd = document.getElementById('game');
